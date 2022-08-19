@@ -13,28 +13,25 @@ import NotFoundPage from "./pages/404";
 
 const App = () =>  {
     return (
-      
       <Router>
         <div>
-          <h1>Software Practice Empirical Evidence Database (SPEED)</h1>
+          
+        <h1>Software Practice Empirical Evidence Database (SPEED)</h1>
             <ul className="header">
               <li><NavLink end to = "/">Home</NavLink></li>
                 <li><NavLink to = "/SEPractice">Select the Practice</NavLink></li>
                 <li><NavLink to = "/SubmitArticle">Submit an Article</NavLink></li>
             </ul>
-            
-          <div className="content">
+            <div className="content">
           
-        <Routes>
-          <Route  path="/" element={Home}/>
-            <Route  path="/SEPractice" element={SEPractice}/>
-            <Route  path="/SubmitArticle" element={SubmitArticle}/>
-            <Route  path="/404" element={NotFoundPage}/>
-            
-        </Routes>
-        
-        
-        </div>
+          <Routes>
+            <Route exact path="/" element={<Home/>}/>
+              <Route  path="/SEPractice" element={<SEPractice/>}/>
+              <Route  path="/SubmitArticle" element={<SubmitArticle/>}/>
+              <Route  path="*" element={<NotFoundPage/>}/>
+              
+          </Routes>
+          </div>
         </div>
         </Router>
         
