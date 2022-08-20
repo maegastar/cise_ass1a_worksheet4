@@ -4,7 +4,6 @@ import {
   Routes,
   NavLink,
   BrowserRouter as Router,
-  Navigate
 } from "react-router-dom";
 import Home from "./pages/Home";
 import SEPractice from "./pages/SE-Practice";
